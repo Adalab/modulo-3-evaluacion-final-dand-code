@@ -1,10 +1,18 @@
 import CharacterCard from './CharactersCard';
 
 const CharacterList = props => {
+  const characterItem = props.characters.map(character => {
+    return (
+      <li key={character.id}><CharacterCard character={character} /></li>
+    )
+  })
+
   return (
     <section>
       <ul className="cards">
-        <CharacterCard />
+        <li>
+        {characterItem}
+        </li>
       </ul>
     </section>
   )

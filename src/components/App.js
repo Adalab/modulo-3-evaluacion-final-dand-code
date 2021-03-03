@@ -1,8 +1,15 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import getDataFromApi from '../service/GetDataFromApi'
 import CharacterList from './CharacterList';
+
 
 const App = () => {
 
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    getDataFromApi().then(data => setCharacters(data))
+  }, []);
 
   return (
     <>
@@ -26,7 +33,7 @@ const App = () => {
             </label>
         </form>
       </section>
-      <CharacterList />
+      <CharacterList characters={characters}/>
     </>
   );
 };
