@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  background-color: bisque;
+  height: 100vh;
+  padding: 60px;
+}
+.header{
+  width: 300px;
+  display: flex;
+  justify-content:space-between;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.title{
+  margin-bottom: 20px;
+}
+
+p{
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
