@@ -1,6 +1,5 @@
 const Characters = props => {
-
-  console.log(props)
+  
   return (
     <>
       <img className="card__img" src={props.character.image} alt="Foto personaje" />
