@@ -8,8 +8,8 @@ import '../App.css';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
-  const [nameInput, setNameInput] = useState('');
-  const [specieInput, setSpecieInput] = useState('');
+  const [nameState, setNameState] = useState('');
+  const [specieState, setSpecieState] = useState('all');
 
 // Recibimos los datos desde API
   useEffect(() => {
@@ -19,13 +19,15 @@ const App = () => {
   // Actualizamos el valor de los estados
   const handleFilter = (valueInput) => {
     if (valueInput.key === 'name') {
-      setNameInput(valueInput.value)
+      setNameState(valueInput.value);
     } else if (valueInput.key === 'specie') {
-      setSpecieInput(valueInput.value)
+      setSpecieState(valueInput.value);
     }
   }
 // A partir del nuevo valor del estado, filtramos los personajes
-  const filterCharacters = characters.filter(character =>{return character.name.toUpperCase().includes(nameInput.toUpperCase())});
+  const filterCharacters = characters.filter(character => { return character.name.toUpperCase().includes(nameState.toUpperCase()) }).filter(character => {
+    return specieState === 'all' ? true : character.specie === specieState;
+  });
 
 
   return (

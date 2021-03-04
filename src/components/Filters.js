@@ -13,7 +13,7 @@ const Filters = props => {
         </h1>
         <form onChange={handlePreventDefault}>
           <FilterByname handleFilter={props.handleFilter}/>
-          <FilterBySpecie />
+          <FilterBySpecie handleFilter={props.handleFilter} />
         </form>
       </section>
     )

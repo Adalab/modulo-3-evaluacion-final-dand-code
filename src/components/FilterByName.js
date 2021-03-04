@@ -1,6 +1,6 @@
 const FilterByName = props => {
 
-    //Send input value to APP.
+    //Envia voler del input a APP.
     const handleChange = (ev) => {
         props.handleFilter({
             key: 'name',
