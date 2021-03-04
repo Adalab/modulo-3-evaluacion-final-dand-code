@@ -3,16 +3,14 @@ import CharacterCard from './CharactersCard';
 const CharacterList = props => {
   const characterItem = props.characters.map(character => {
     return (
-      <li key={character.id}><CharacterCard character={character} /></li>
+      <li key={character.id} className="card_list"><CharacterCard character={character} /></li>
     )
   })
 
   return (
     <section>
-      <ul className="cards">
-        <li>
+      <ul className="display_grid-cards">
         {characterItem}
-        </li>
       </ul>
     </section>
   )
