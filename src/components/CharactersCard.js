@@ -10,7 +10,6 @@ const Characters = props => {
         <p className="card__description">
           {props.character.specie}</p>
       </div>
-
     </Link>
   )
 }

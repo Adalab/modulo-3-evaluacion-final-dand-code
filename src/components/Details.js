@@ -3,17 +3,13 @@ import { Link } from 'react-router-dom';
 import bg_image from '../image/Rick_and_Morty_-_logo__English_-removebg-preview.png';
 
 const Details = props => {
-    console.log(props);
     return (
-        <div className="display_flex-column bg_img">
-                <h1>
-                    <img src={bg_image} alt="Logo Rick and Morty" className="logo_img" />
-                </h1>
-                <Link to="/">
-                    <p>VOLVER</p>
-                </Link>
+        <div className="App-wrap">
+            {/* <Link to="/">
+                <p>VOLVER</p>
+            </Link> */}
             <section className="display_grid-detail">
-                <img className="card__img" src={props.character.image} alt="Foto personaje" />
+                <img className="card__img-detail" src={props.character.image} alt="Foto personaje" />
                 <ul className="card__footer">
                     <li className="card__title">
                         Nombre:{props.character.name}
@@ -22,10 +18,10 @@ const Details = props => {
                         Especie:{props.character.specie}
                     </li>
                     <li className="card__description">
-                        Origen:{props.character.origin.name}
+                        Origen:{props.character.origin}
                     </li>
                     <li className="card__description">
-                        Epsodios: {props.character.episode.length}
+                        Epsodios: {props.character.episodes}
                     </li>
                     <li className="card__description">
                         Status: {props.character.status}

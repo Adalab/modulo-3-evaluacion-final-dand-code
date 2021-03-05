@@ -22,7 +22,7 @@ const App = () => {
   const handleFilter = (valueInput) => {
     if (valueInput.key === 'name') {
       setNameState(valueInput.value);
-    } else if (valueInput.key === 'specie') {
+    } else if (valueInput.key === 'specie') { 
       setSpecieState(valueInput.value);
     }
   }
@@ -31,22 +31,24 @@ const App = () => {
     return specieState === 'all' ? true : character.specie === specieState;
   });
 
+  //Renderiza la pagina de detalles:
   const renderDetail = props => {
-    console.log(characters);
     const id = props.match.params.id;
     const selectCharacter = characters.find(character => {
-      return character.id === id;
-    })
+      return character.id == id;
+    });
     return <Details character={selectCharacter} />
+    
   }
-
+  
   return (
     <div className="App-wrap">
       <Filters handleFilter={handleFilter} />
-      <CharacterList characters={filterCharacters} />
       <Switch>
-        <Route  path="/character/:id" render={renderDetail} />
+        <Route path="/character/:id" render={renderDetail} />
       </Switch>
+      <CharacterList characters={filterCharacters} />
+      
     </div>
   );
 };
