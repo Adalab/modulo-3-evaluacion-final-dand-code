@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import getDataFromApi from '../service/GetDataFromApi'
 import CharacterList from './CharacterList';
 import Filters from './Filters';
+import Details from './Details';
 import '../App.css';
 
 
@@ -15,7 +17,7 @@ const App = () => {
   useEffect(() => {
     getDataFromApi().then(data => setCharacters(data))
   }, []);
-
+  
   // Actualizamos el valor de los estados
   const handleFilter = (valueInput) => {
     if (valueInput.key === 'name') {
@@ -29,11 +31,22 @@ const App = () => {
     return specieState === 'all' ? true : character.specie === specieState;
   });
 
+  const renderDetail = props => {
+    console.log(characters);
+    const id = props.match.params.id;
+    const selectCharacter = characters.find(character => {
+      return character.id === id;
+    })
+    return <Details character={selectCharacter} />
+  }
 
   return (
     <div className="App-wrap">
       <Filters handleFilter={handleFilter} />
       <CharacterList characters={filterCharacters} />
+      <Switch>
+        <Route  path="/character/:id" render={renderDetail} />
+      </Switch>
     </div>
   );
 };
