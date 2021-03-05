@@ -43,11 +43,14 @@ const App = () => {
   
   return (
     <div className="App-wrap">
-      <Filters handleFilter={handleFilter} />
       <Switch>
+        <Route exact path="/">
+          <Filters handleFilter={handleFilter} />
+          <CharacterList characters={filterCharacters} />
+        </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>
-      <CharacterList characters={filterCharacters} />
+     
       
     </div>
   );
