@@ -6,10 +6,11 @@ const Details = props => {
     return (
         <div className="App-wrap">
             <Link to="/">
-                <p>VOLVER</p>
+                <p className="back_link">Volver</p>
             </Link>
             <section className="display_grid-detail">
                 <img className="card__img-detail" src={props.character.image} alt="Foto personaje" />
+                
                 <ul className="card__footer">
                     <li className="card__title">
                         Nombre:{props.character.name}

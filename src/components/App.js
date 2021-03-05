@@ -5,6 +5,7 @@ import CharacterList from './CharacterList';
 import Filters from './Filters';
 import Details from './Details';
 import '../App.css';
+import bg_image from '../image/Rick_and_Morty_-_logo__English_-removebg-preview.png';
 
 
 
@@ -43,15 +44,21 @@ const App = () => {
   
   return (
     <div className="App-wrap">
+      <header className="header">
+          <img src={bg_image} alt="Logo Rick and Morty" className="logo_img" />
+      </header>
+      <main>
       <Switch>
         <Route exact path="/">
           <Filters handleFilter={handleFilter} />
           <CharacterList characters={filterCharacters} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
-      </Switch>
-     
-      
+        </Switch>
+      </main>
+      <footer className="footer">
+        <spain>Evaluación Final - Modulo 3 - Dandara Almeida</spain>
+      </footer>
     </div>
   );
 };
