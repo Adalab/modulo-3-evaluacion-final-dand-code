@@ -5,9 +5,9 @@ import bg_image from '../image/Rick_and_Morty_-_logo__English_-removebg-preview.
 const Details = props => {
     return (
         <div className="App-wrap">
-            {/* <Link to="/">
+            <Link to="/">
                 <p>VOLVER</p>
-            </Link> */}
+            </Link>
             <section className="display_grid-detail">
                 <img className="card__img-detail" src={props.character.image} alt="Foto personaje" />
                 <ul className="card__footer">
