@@ -34,9 +34,9 @@ const App = () => {
 
   //Renderiza la pagina de detalles:
   const renderDetail = props => {
-    const id = props.match.params.id;
+    const id = parseInt(props.match.params.id);
     const selectCharacter = characters.find(character => {
-      return character.id == id;
+      return character.id === id;
     });
     return <Details character={selectCharacter} />
     

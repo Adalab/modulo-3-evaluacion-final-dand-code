@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bg_image from '../image/Rick_and_Morty_-_logo__English_-removebg-preview.png';
+
 
 const Details = props => {
     return (
