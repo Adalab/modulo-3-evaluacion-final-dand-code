@@ -2,9 +2,10 @@ import React from 'react';
 
 const Nav = props => {
     if (props.firstPage) {
-        return (<div className="nav-page">
+        return (
+            <div className="nav-page">
             <p>Page</p>
-            <i className="fa fa-chevron-right" aria-hidden="true"
+            <i className="fa fa-chevron-right nav-page_icon" aria-hidden="true"
                 onClick={props.nextPage}
             ></i>
         </div>
@@ -14,7 +15,7 @@ const Nav = props => {
         return (
             <div className="nav-page">
                 <i
-                    className="fa fa-chevron-left" aria-hidden="true"
+                    className="fa fa-chevron-left nav-page_icon" aria-hidden="true"
                     onClick={props.prevPage}
                 ></i>
                 <p>Page</p>
@@ -24,11 +25,11 @@ const Nav = props => {
         return (
             <div className="nav-page">
                 <i
-                    className="fa fa-chevron-left" aria-hidden="true"
+                    className="fa fa-chevron-left nav-page_icon" aria-hidden="true"
                     onClick={props.prevPage}
                 ></i>
                 <p>Page</p>
-                <i className="fa fa-chevron-right" aria-hidden="true"
+                <i className="fa fa-chevron-right nav-page_icon" aria-hidden="true"
                     onClick={props.nextPage}
                 ></i>
             </div>
