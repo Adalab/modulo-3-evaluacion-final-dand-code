@@ -1,3 +1,5 @@
+@import '../style/mediaqueries.css';
+
 /* details page */
 .display_grid-detail{
     display:flex;
