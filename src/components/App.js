@@ -57,7 +57,7 @@ const App = () => {
         </Switch>
       </main>
       <footer className="footer">
-        <spain>Evaluación Final - Modulo 3 - Dandara Almeida</spain>
+        <span>Evaluación Final - Modulo 3 - Dandara Almeida</span>
       </footer>
     </div>
   );
