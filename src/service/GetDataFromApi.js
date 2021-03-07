@@ -1,10 +1,9 @@
-
-const getDataFromApi = () => {
-    return fetch('https://rickandmortyapi.com/api/character')
+const defaultPage = "https://rickandmortyapi.com/api/character";
+const getDataFromApi = (page) => {
+    return fetch(page || defaultPage)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data.results);
-            return data.results.map(character => {
+            const results = data.results.map(character => {
                 return {
                     id: character.id,
                     name: character.name,
@@ -15,6 +14,11 @@ const getDataFromApi = () => {
                     status: character.status,
                 };
             });
+            return {
+                results: results,
+                prevPage: data.info.prev,
+                nextPage: data.info.next
+            }
         });
 };
 

@@ -1,5 +1,5 @@
-@import '../style/Details.css';
-@import '../style/mediaqueries.css';
+@import './details.css';
+/* @import './mediaqueries.css';*/
 
 *{
   box-sizing: border-box;
