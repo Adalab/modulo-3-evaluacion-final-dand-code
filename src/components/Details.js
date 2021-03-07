@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../style/App.css';
+import '../style/Details.css';
 
 const Details = props => {
     if (props.character === undefined) {

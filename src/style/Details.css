@@ -1,0 +1,39 @@
+/* details page */
+.display_grid-detail{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: 20px auto 0;
+    border: 1px solid cyan;
+  }
+  .back_link{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 50px;
+    border: 3px solid #00b0c7;
+    color: #00b0c7;
+  }
+  .back_link:hover{
+    transform: scale(1.3);
+    background-color: black;
+  }
+  .div-back{
+    width: 90%;
+    text-align: right;
+    margin: 0 auto;
+  }
+  
+  /* personaje no encontrado */
+  .alert{
+    width: 60%;
+    height: 80px;
+    margin: 40px auto 0;
+    text-align: center;
+    padding-top: 17px;
+    border: 3px solid #00b0c7;
+  }
+  

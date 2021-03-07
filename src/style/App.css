@@ -1,0 +1,84 @@
+@import '../style/Details.css';
+@import '../style/mediaqueries.css';
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* page */
+.App-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.App-wrap2{
+  height: 73vh;
+}
+
+.header{
+  text-align: center;
+  padding-top: 100px;
+}
+
+/* form section */
+.display_flex-column{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 20px auto 40px;
+  text-align:center;
+}
+.logo_img{
+  width: 80%;
+}
+
+.form__input-text{
+  padding: 7px 10px;
+  border: 3px solid #00b0c7;
+  background-color: #00b0c7;
+}
+
+.input{
+  width: 80%;
+  max-width: 300px;
+}
+.form__label{
+  font-size: 19px;
+  color: #00b0c7;
+}
+
+/* cards */
+.display_grid-cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+  justify-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card_list{
+ text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  border: 1px solid cyan;
+}
+.card_list:hover{
+  transform: scale(1.1);
+}
+.card__footer{
+  background-color: #00b0c7;
+  line-height: 1;
+}
+
+/* footer */
+.footer{
+  height: 80px;
+  font-size: 10px;
+  text-align: center;
+  padding-top: 30px;
+}
+

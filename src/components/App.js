@@ -4,7 +4,7 @@ import getDataFromApi from '../service/GetDataFromApi'
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import Details from './Details';
-import '../App.css';
+import '../style/App.css';
 import bg_image from '../image/Rick_and_Morty_-_logo__English_-removebg-preview.png';
 
 
